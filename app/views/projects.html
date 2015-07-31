@@ -1,0 +1,9 @@
+<h2>{{ course.name }}'s Projects</h2>
+<table>
+    <tr>
+        <th>Name</th>
+    </tr>
+    <tr ng-repeat="project in course.projects">
+        <td>{{ project.name}}</td>
+    </tr>
+</table>

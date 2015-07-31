@@ -2,16 +2,27 @@
 <html ng-app="coursesApp">
     <head>
         <title>AngularJS Hello World</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     </head>
 
     <body>
+        <nav class="navbar navbar-default">
+            <ul class="nav navbar-nav">
+                <li><a href="#/courses">Courses</a></li>
+            </ul>
+        </nav>
 
-        <div ng-view></div>
+
+        <main>
+            <div ng-view></div>
+        </main>
 
         <script src="scripts/angular.js"></script>
         <script src="scripts/angular-route.js"></script>
         <script src="app/app.js"></script>
         <script src="app/controllers/coursesController.js"></script>
-
+        <script src="app/controllers/projectsController.js"></script>
+        <script src="app/services/coursesFactory.js"></script>
+        <script src="app/services/values.js"></script>
     </body>
 </html>

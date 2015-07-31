@@ -1,4 +1,4 @@
-<h2>My Courses</h2>
+<h2>{{ appSettings.title }}</h2>
 Filter: <input type="text" ng-model="courseNameFilter" />
 <br />
 <br />
@@ -6,10 +6,16 @@ Filter: <input type="text" ng-model="courseNameFilter" />
     <tr>
         <th ng-click="doSort('name')">Course Name</th>
         <th ng-click="doSort('school')">School</th>
+        <th>&nbsp;</th>
     </tr>
     <tr ng-repeat="course in courses | filter:courseNameFilter | orderBy:sortBy:reverse">
         <td>{{ course.name }} </td>
         <td>{{ course.school }}</td>
+        <td><a href="#/projects/{{ course.id }}">View Projects</a><td>
     </tr>
 </table>
 <span>Total courses: {{ courses.length }}</span>
+
+<br />
+
+<footer>Version: {{ appSettings.version }}</footer>

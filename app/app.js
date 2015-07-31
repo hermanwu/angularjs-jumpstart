@@ -7,7 +7,11 @@
         $routeProvider
         .when('/',{
             controller: 'CoursesController',
-            templateUrl: 'app/views/coursesController.html'
+            templateUrl: 'app/views/courses.html'
+        })
+        .when('/projects/:courseId',{
+            controller: 'ProjectsController',
+            templateUrl: 'app/views/projects.html'
         })
         .otherwise({ redirectTo: '/' });
     });
